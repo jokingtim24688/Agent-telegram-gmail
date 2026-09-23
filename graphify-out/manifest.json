@@ -1,0 +1,128 @@
+{
+  "desktop/glasses_agent/__init__.py": {
+    "mtime": 1790180463.7933373,
+    "seen": 1790180717.0381866,
+    "ast_hash": "13f805c024e54b57c05748207fdf1de4",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/__main__.py": {
+    "mtime": 1790180304.972864,
+    "seen": 1790180717.0381901,
+    "ast_hash": "0b4ec6faf5d134e23d59f70529a86dec",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/agent.py": {
+    "mtime": 1790180179.5845463,
+    "seen": 1790180717.0381916,
+    "ast_hash": "959c232cd36fc1c046e25902f42f89ab",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/config.py": {
+    "mtime": 1790180021.6648703,
+    "seen": 1790180717.038193,
+    "ast_hash": "df07fc7acf9db74488ecae5c845bd5c0",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/core.py": {
+    "mtime": 1790180456.7651548,
+    "seen": 1790180717.0381942,
+    "ast_hash": "976ad00406eb176050be60fc991fdacf",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/gmail_backup.py": {
+    "mtime": 1790180250.4128652,
+    "seen": 1790180717.0381954,
+    "ast_hash": "1b68b74ecf6d6c3b11670c617bead130",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/hardware.py": {
+    "mtime": 1790180119.5848682,
+    "seen": 1790180717.038197,
+    "ast_hash": "55c28f3747a77a2b87ace616d3015bf1",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/llm.py": {
+    "mtime": 1790180131.7648678,
+    "seen": 1790180717.0382051,
+    "ast_hash": "972efea92c3c6a06db8ad4540065e77e",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/memory.py": {
+    "mtime": 1790180456.7647347,
+    "seen": 1790180717.0382073,
+    "ast_hash": "9a95587723242f9640ec337c3f72dd70",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/provision.py": {
+    "mtime": 1790180266.9328647,
+    "seen": 1790180717.0382082,
+    "ast_hash": "8d620da21735cf895830ee39ac4e39f5",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/static/app.js": {
+    "mtime": 1790180646.247816,
+    "seen": 1790180717.0382092,
+    "ast_hash": "e449cd8e876c47857af586fb5c770c0e",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/telegram_service.py": {
+    "mtime": 1790180565.2818468,
+    "seen": 1790180717.0382109,
+    "ast_hash": "8183406d1abda9c0eda4eb743f035d66",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/web.py": {
+    "mtime": 1790180291.0368643,
+    "seen": 1790180717.0382116,
+    "ast_hash": "4bad845d09fef7870d2ae5b405215a72",
+    "semantic_hash": ""
+  },
+  "firmware/glasses/include/ca_certs.h": {
+    "mtime": 1790179939.2608721,
+    "seen": 1790180717.0382125,
+    "ast_hash": "fb9a638b33d53b70e80a1d12b369ec96",
+    "semantic_hash": ""
+  },
+  "firmware/glasses/src/main.cpp": {
+    "mtime": 1790180005.4208708,
+    "seen": 1790180717.0382135,
+    "ast_hash": "661c1e3590fd7dfb35a6e86cbe3cd36a",
+    "semantic_hash": ""
+  },
+  "scripts/setup_macos.sh": {
+    "mtime": 1790180479.7768598,
+    "seen": 1790180717.0382144,
+    "ast_hash": "af96952337f175f9776023cad79df206",
+    "semantic_hash": ""
+  },
+  "scripts/setup_windows.ps1": {
+    "mtime": 1790180474.68886,
+    "seen": 1790180717.0382152,
+    "ast_hash": "bae3a9bdc964457d2caa7736823d258b",
+    "semantic_hash": ""
+  },
+  "Progress.md": {
+    "mtime": 1790179584.4248803,
+    "seen": 1790180717.038216,
+    "ast_hash": "93633ed7f14be0a9eb9fcc01f6a4eefa",
+    "semantic_hash": ""
+  },
+  "desktop/glasses_agent/static/index.html": {
+    "mtime": 1790180355.6328628,
+    "seen": 1790180717.0382175,
+    "ast_hash": "f867f35eaa897de7680b6c518d27384e",
+    "semantic_hash": ""
+  },
+  "desktop/requirements.txt": {
+    "mtime": 1790180463.7898684,
+    "seen": 1790180717.0382185,
+    "ast_hash": "dc4798679625fcbfb37dcf6a14f71a2f",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1790180760.5288534,
+    "seen": 1790180770.2466393,
+    "ast_hash": "5351a08129a186badcdd3a56e641a930",
+    "semantic_hash": ""
+  }
+}

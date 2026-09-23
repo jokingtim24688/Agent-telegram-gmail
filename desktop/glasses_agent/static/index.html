@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loupe</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='13' cy='13' r='9' fill='none' stroke='%23d9542b' stroke-width='3'/%3E%3Cpath d='M20 20l8 8' stroke='%23d9542b' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="hud" aria-label="Status">
+    <div class="mark"><span class="mark-lens" aria-hidden="true"></span>Loupe</div>
+    <ul class="signals" id="signals">
+      <li data-k="glasses"><i class="dot"></i><b>Glasses</b><span>…</span></li>
+      <li data-k="telegram"><i class="dot"></i><b>AI account</b><span>…</span></li>
+      <li data-k="ollama"><i class="dot"></i><b>Model</b><span>…</span></li>
+      <li data-k="gmail"><i class="dot"></i><b>Email backup</b><span>…</span></li>
+    </ul>
+    <p class="busy" id="busy" hidden><i class="dot dot--live"></i><span></span></p>
+  </header>
+
+  <main class="layout">
+    <section class="sheet-col" aria-labelledby="sheet-title">
+      <form class="ask" id="ask">
+        <label for="question">Ask about what's in front of you</label>
+        <div class="ask-row">
+          <input id="question" autocomplete="off" placeholder="Is this the 42 bus?">
+          <button class="btn btn--shutter" type="submit"><span class="shutter-ring" aria-hidden="true"></span>Look now</button>
+        </div>
+        <p class="ask-hint" id="pending" hidden></p>
+      </form>
+
+      <div class="sheet-head">
+        <h1 id="sheet-title">Contact sheet</h1>
+        <span class="count" id="count"></span>
+        <input type="search" id="find" placeholder="Search what the glasses saw: receipt, bus, wifi password" aria-label="Search frames">
+      </div>
+      <ol class="sheet" id="sheet"></ol>
+      <div class="empty" id="empty" hidden></div>
+    </section>
+
+    <aside class="rail">
+      <section class="panel panel--setup" id="setup" hidden>
+        <h2>Still to set up</h2>
+        <ul id="problems"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Who's listening</h2>
+        <dl class="listeners" id="listeners"></dl>
+      </section>
+
+      <section class="panel">
+        <h2>Model fit</h2>
+        <p class="hw" id="hw">Measuring this machine…</p>
+        <div class="gauge" id="gauge" aria-hidden="true"><span class="gauge-model"></span><span class="gauge-room"></span></div>
+        <p class="gauge-legend" id="gauge-legend"></p>
+        <ul class="models" id="models"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Glasses board</h2>
+        <form id="board">
+          <label class="field">
+            <span>USB port</span>
+            <span class="row"><select id="port"></select><button class="btn btn--quiet" type="button" id="refresh-ports">Rescan</button></span>
+          </label>
+          <fieldset class="wifi">
+            <legend>Wi-Fi networks the glasses may join</legend>
+            <div class="wifi-row"><input name="ssid" placeholder="Home network" aria-label="Network name"><input name="password" type="password" placeholder="Password" aria-label="Password"></div>
+            <div class="wifi-row"><input name="ssid" placeholder="Phone hotspot" aria-label="Network name"><input name="password" type="password" placeholder="Password" aria-label="Password"></div>
+            <div class="wifi-row"><input name="ssid" placeholder="Optional third" aria-label="Network name"><input name="password" type="password" placeholder="Password" aria-label="Password"></div>
+          </fieldset>
+          <label class="field field--inline"><span>Button GPIO</span><input id="btn-pin" type="number" min="0" max="48" value="1"></label>
+          <div class="board-actions">
+            <button class="btn btn--solid" type="submit">Write to glasses</button>
+            <button class="btn btn--quiet" type="button" id="board-status">Check board</button>
+            <button class="btn btn--quiet" type="button" id="flash">Flash firmware</button>
+            <button class="btn btn--quiet" type="button" id="ping">Ping over Telegram</button>
+          </div>
+          <pre class="log" id="board-log" hidden></pre>
+        </form>
+      </section>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="/static/app.js" type="module"></script>
+</body>
+</html>

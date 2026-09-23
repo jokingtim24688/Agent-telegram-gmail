@@ -34,9 +34,39 @@ Context about the agent task. For example:
 - The alternatives:
   - **(A) a free official bot plus a private-channel relay.** Bots can't see other bots' messages in groups, but a bot that is a channel admin does receive `channel_post` updates. This is the documented workaround.
   - **(B) a user account the user registers with their own second number,** used as a Telethon userbot with the user's own api_id from my.telegram.org.
-- Waiting on the user's choice before building.
+- **Decided (user):** (B), a second account the user owns. Gmail: each device gets its own account, used **only as a backup** route.
+- **Decided (user):** the AI, the glasses and the user share one Telegram group. Each member only reads messages from assigned senders. The glasses obey only the AI; the AI answers only the user and the glasses. Senders are matched by numeric user ID, looked up from @usernames (display names can be copied).
 
-### Next steps (once context arrives)
-1. Scaffold the agent from the spec.
-2. Generate `graphify-out/wiki/index.md` so future sessions can use the wiki instead of reading raw files.
-3. Update this file after each step.
+## 2026-09-23 — v1 built ("Loupe")
+
+### Done
+- [x] **Firmware** `firmware/glasses/` for the XIAO ESP32S3 Sense (PlatformIO): camera at SVGA JPEG. A button press or `/snap` from the AI sends the frame with Bot API `sendPhoto` to the group. If that fails, the frame goes out by Gmail SMTP from the glasses' own account. `/ping` replies with a `#status` line. Credentials live in NVS, written over USB serial JSON. TLS is checked against bundled root CAs (Go Daddy G2, GTS R1/R4, GlobalSign).
+- [x] **Desktop** `desktop/glasses_agent/`, which runs on Windows and macOS:
+  - Telethon client for the AI account. It creates the group itself, adds the bot and the owner (falls back to an invite link), and filters senders by user ID.
+  - Ollama client. The model is picked from the GPU size (4060 → `qwen3-vl:8b`; Mac 16–24 GB → 8b; Mac 36 GB+ → 30b). Falls back cleanly when a model can't call tools.
+  - Agent with tools `look_through_glasses` and `search_visual_memory`. `/look [question]` answers the question from the next frame.
+  - Visual memory (JPEGs + captures.jsonl) that can be searched from chat and from the dashboard.
+  - Gmail backup: IMAP poll for frames the glasses emailed, and SMTP fallback to OWNER_EMAIL when Telegram is down.
+  - USB provisioning and PlatformIO flashing, available from the CLI and the dashboard.
+- [x] **Dashboard** (anti-vibe-polish pass): "Loupe" darkroom theme with a safelight accent and paper prints; glass only on the floating HUD; film grain; one motion moment (a new frame "develops"); spring micro-interactions; model-fit VRAM gauge; "Who's listening" panel; context-specific empty and error states. Checked at desktop and phone widths.
+- [x] Setup scripts: `scripts/setup_windows.ps1`, `scripts/setup_macos.sh`. README with the whole setup.
+- [x] Graphify graph and wiki generated with the real `graphify` CLI: `graphify-out/wiki/index.md`.
+
+### Verified in the cloud session
+- Agent tool loop against a fake Ollama: tool call → snapshot request; `<think>` stripping; no-tools fallback; memory search.
+- USB provisioning against a fake board on a pty (payload contents and reply parsing).
+- Full app starts with an empty `.env` and shows actionable setup problems (a first-run crash in Telethon was fixed). The DNS-rebinding guard returns 403.
+- Model recommendation across a 4060 and Macs with 8, 16, 24, 36 and 48 GB.
+
+### Not verified
+- **The firmware compile.** This session's network policy blocks the PlatformIO registry (403), so the firmware was reviewed by hand only. The first `pio run` on the user's PC is the real compile check.
+- Live Telegram, Gmail and Ollama: no credentials or GPU in the cloud container.
+
+### Next ideas
+1. Save frames to the SD card when there's no Wi-Fi, and send them later.
+2. Voice questions through the Sense board's PDM mic, transcribed with Whisper on the PC.
+3. Handle the group being upgraded to a supergroup automatically (for now: clear `group_id` and re-provision).
+4. Deep sleep between presses for battery life.
+
+### For future sessions
+Read `graphify-out/wiki/index.md` first. Regenerate it after changes: `graphify update . && graphify export wiki`.

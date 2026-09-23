@@ -1,0 +1,20 @@
+# secrets and personal data — never commit
+desktop/.env
+desktop/data/
+*.session
+*.session-journal
+
+# python
+__pycache__/
+*.pyc
+.venv/
+desktop/.venv/
+
+# platformio
+firmware/glasses/.pio/
+.vscode/
+
+.DS_Store
+
+# graphify: keep the wiki + graph, not the extraction cache
+graphify-out/cache/
