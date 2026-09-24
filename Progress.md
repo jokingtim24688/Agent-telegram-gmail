@@ -70,3 +70,23 @@ Context about the agent task. For example:
 
 ### For future sessions
 Read `graphify-out/wiki/index.md` first. Regenerate it after changes: `graphify update . && graphify export wiki`.
+
+## 2026-09-24 — `windows-control` skill
+
+**Request:** "make me a skill for as many things on a windows computer as you can".
+
+### Done
+- [x] `.claude/skills/windows-control/`, PowerShell-first, organized by progressive disclosure:
+  - `SKILL.md`: how to run PowerShell from Claude Code's Git Bash (`-File` beats `-Command`), how to check for elevation, a table of how careful to be (read-only → system-level), a routing table to the references, and the list of scripts.
+  - 10 references: files & search, apps & processes (winget, launching, protocol links, startup, default apps), system & hardware (performance triage, disks, battery, power, updates, drivers, logs, repairs), network (internet triage, Wi-Fi, ports, firewall, hosts, proxy, shares), settings & personalization (with the `ms-settings:` link table), automation & UI (scheduled tasks, services, registry, PATH, clipboard, UI Automation, AutoHotkey, file watchers), security & users, dev tools (WSL, CUDA, SSH, Sandbox), Office/printing/media (COM, spooler, ffmpeg), troubleshooting.
+  - 10 scripts: `sysinfo` (real VRAM via the registry / nvidia-smi), `audio` (exact volume through Core Audio COM, plus media keys), `window`, `input` (SendInput, Unicode typing, key combos, mouse), `screenshot` (DPI-aware, per monitor or per window), `notify` (toast, relaunches under 5.1 from pwsh 7, balloon fallback), `speak` (SAPI), `display` (brightness, dark mode, wallpaper), `cleanup` (dry run by default), `find-large`.
+- [x] Packaged as `windows-control.skill` and sent to the user for one-click install.
+
+### Verified (PowerShell 7.4 on Linux)
+- All 10 scripts parse, and all 6 embedded C# interop blocks compile with `Add-Type`. The SendInput `INPUT` struct is 40 bytes (correct for x64).
+- All 80 `powershell` code blocks in the references parse.
+- The skill-creator package validator passes (the YAML frontmatter and the 1,024-character description limit were fixed).
+
+### Not verified
+- Nothing ran on real Windows, since this container is Linux. The Win32/COM calls use well-established signatures, but the first real run happens on the user's PC.
+- The skill-creator eval loop (with-skill vs. baseline runs) wasn't run. It can be done next if wanted.

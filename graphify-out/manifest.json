@@ -102,9 +102,9 @@
     "semantic_hash": ""
   },
   "Progress.md": {
-    "mtime": 1790179584.4248803,
-    "seen": 1790180717.038216,
-    "ast_hash": "93633ed7f14be0a9eb9fcc01f6a4eefa",
+    "mtime": 1790267856.2826931,
+    "seen": 1790267861.2703257,
+    "ast_hash": "8755844a07015826578518d8fc4cce14",
     "semantic_hash": ""
   },
   "desktop/glasses_agent/static/index.html": {
@@ -123,6 +123,132 @@
     "mtime": 1790180760.5288534,
     "seen": 1790180770.2466393,
     "ast_hash": "5351a08129a186badcdd3a56e641a930",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/scripts/audio.ps1": {
+    "mtime": 1790267274.6267066,
+    "seen": 1790267861.2702665,
+    "ast_hash": "1d6d5c83936d2af21fd0161430902f3a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/scripts/cleanup.ps1": {
+    "mtime": 1790267396.4547038,
+    "seen": 1790267861.270271,
+    "ast_hash": "c2a458d3f53eede570e6ccc43a0fed6e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/scripts/display.ps1": {
+    "mtime": 1790267377.8307042,
+    "seen": 1790267861.2702725,
+    "ast_hash": "e07bfec8579888db59547f81a76669aa",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/scripts/find-large.ps1": {
+    "mtime": 1790267403.0707035,
+    "seen": 1790267861.2702742,
+    "ast_hash": "a4ca319335090626e82da90dccbd8fc9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/scripts/input.ps1": {
+    "mtime": 1790267326.4427054,
+    "seen": 1790267861.2702754,
+    "ast_hash": "dc6999a1c45620cb54fd9f61d62efe8c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/scripts/notify.ps1": {
+    "mtime": 1790267356.7147045,
+    "seen": 1790267861.2702768,
+    "ast_hash": "8d1e536076469c72ddd157f2ff2c648e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/scripts/screenshot.ps1": {
+    "mtime": 1790267340.534705,
+    "seen": 1790267861.2702782,
+    "ast_hash": "8421fcddeb65d7b9ad34cb70063eb3e3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/scripts/speak.ps1": {
+    "mtime": 1790267363.9747045,
+    "seen": 1790267861.2702792,
+    "ast_hash": "1f6852acde40e87c07ba4ecf6c95edae",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/scripts/sysinfo.ps1": {
+    "mtime": 1790267252.070707,
+    "seen": 1790267861.2702801,
+    "ast_hash": "5f8e2b3405a137dae71c31ab16bc464b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/scripts/window.ps1": {
+    "mtime": 1790267300.950706,
+    "seen": 1790267861.2702813,
+    "ast_hash": "79ebcc22eee7fdf74cd6b575ffc96740",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/SKILL.md": {
+    "mtime": 1790267840.050135,
+    "seen": 1790267861.2703133,
+    "ast_hash": "3a36cd5f5aa8df81c6e3e508e9993cbc",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/references/apps-and-processes.md": {
+    "mtime": 1790267801.8640194,
+    "seen": 1790267861.2703145,
+    "ast_hash": "0daf78840d8c17d52e176fc0917edb9b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/references/automation-and-ui.md": {
+    "mtime": 1790267675.8346972,
+    "seen": 1790267861.2703154,
+    "ast_hash": "93f8ae0ac16889f9107670a22aed7c72",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/references/dev-tools.md": {
+    "mtime": 1790267720.9906962,
+    "seen": 1790267861.2703168,
+    "ast_hash": "b8829445e8595f02202541b4726f18c5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/references/files-and-search.md": {
+    "mtime": 1790267608.0893526,
+    "seen": 1790267861.2703176,
+    "ast_hash": "cd35a29460067c033f2619c3aa121dba",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/references/network.md": {
+    "mtime": 1790267608.0895834,
+    "seen": 1790267861.2703185,
+    "ast_hash": "dd450a6c6ee3021082ad29f3ee614d8d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/references/office-and-media.md": {
+    "mtime": 1790267801.8636127,
+    "seen": 1790267861.27032,
+    "ast_hash": "802051e65baea9fc25fe85e1bb88b104",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/references/security-and-users.md": {
+    "mtime": 1790267701.7026968,
+    "seen": 1790267861.2703214,
+    "ast_hash": "5873e230b5f824286d702ee803e18d62",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/references/settings-and-personalization.md": {
+    "mtime": 1790267593.190699,
+    "seen": 1790267861.270322,
+    "ast_hash": "b34fef35d82df9c2b0b872b0e9fb0dee",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/references/system-and-hardware.md": {
+    "mtime": 1790267801.863828,
+    "seen": 1790267861.2703233,
+    "ast_hash": "72bd50881f1cb614b57ddaee3a7b1efa",
+    "semantic_hash": ""
+  },
+  ".claude/skills/windows-control/references/troubleshooting.md": {
+    "mtime": 1790267776.998695,
+    "seen": 1790267861.2703242,
+    "ast_hash": "c22175b8e544faa09f92e95f08fd3b5f",
     "semantic_hash": ""
   }
 }

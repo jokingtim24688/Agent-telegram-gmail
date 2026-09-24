@@ -1,12 +1,11 @@
 # telegram_service.py
 
-> 28 nodes
+> 26 nodes
 
 ## Key Concepts
 
 - **telegram_service.py** (21 connections) — `desktop/glasses_agent/telegram_service.py`
 - **TelegramService** (15 connections) — `desktop/glasses_agent/telegram_service.py`
-- **interactive_login()** (8 connections) — `desktop/glasses_agent/telegram_service.py`
 - **._connect_and_listen()** (8 connections) — `desktop/glasses_agent/telegram_service.py`
 - **_SetupError** (5 connections) — `desktop/glasses_agent/telegram_service.py`
 - **make_client()** (5 connections) — `desktop/glasses_agent/telegram_service.py`
@@ -28,13 +27,15 @@
 - **TelegramClient** (1 connections)
 - **The AI's own Telegram user account, driven with Telethon. Three members share…** (1 connections) — `desktop/glasses_agent/telegram_service.py`
 - **A problem the user has to fix; retrying won't help.** (1 connections) — `desktop/glasses_agent/telegram_service.py`
-- **First-time sign-in for the AI account. Telegram texts a code to that account.** (1 connections) — `desktop/glasses_agent/telegram_service.py`
-- *... and 3 more nodes in this community*
+- **telethon** (1 connections)
+- **telethon_errors** (1 connections)
+- *... and 1 more nodes in this community*
 
 ## Relationships
 
-- [provision.py](provision.py.md) (12 shared connections)
-- [core.py](core.py.md) (5 shared connections)
+- [provision.py](provision.py.md) (11 shared connections)
+- [core.py](core.py.md) (4 shared connections)
+- [web.py](web.py.md) (1 shared connections)
 - [hardware.py](hardware.py.md) (1 shared connections)
 
 ## Source Files
@@ -43,8 +44,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 57 (93%)
-- INFERRED: 4 (7%)
+- EXTRACTED: 53 (95%)
+- INFERRED: 3 (5%)
 - AMBIGUOUS: 0 (0%)
 
 ---

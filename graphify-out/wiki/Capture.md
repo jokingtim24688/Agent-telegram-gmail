@@ -2,7 +2,7 @@
 
 > God node · 13 connections · `desktop/glasses_agent/memory.py`
 
-**Community:** [Core](Core.md)
+**Community:** [core.py](core.py.md)
 
 ## Connections by Relation
 
