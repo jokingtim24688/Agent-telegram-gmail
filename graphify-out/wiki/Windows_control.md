@@ -5,7 +5,7 @@
 ## Key Concepts
 
 - **Windows control** (6 connections) — `.claude/skills/windows-control/SKILL.md`
-- **SKILL.md** (1 connections) — `.claude/skills/windows-control/SKILL.md`
+- **windows-control/SKILL.md** (1 connections) — `.claude/skills/windows-control/SKILL.md`
 - **Before running anything: know your shell** (1 connections) — `.claude/skills/windows-control/SKILL.md`
 - **Bundled scripts** (1 connections) — `.claude/skills/windows-control/SKILL.md`
 - **How careful to be** (1 connections) — `.claude/skills/windows-control/SKILL.md`

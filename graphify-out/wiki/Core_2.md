@@ -31,7 +31,7 @@
 - [State](State.md) `INFERRED`
 - [LLM](LLM.md) `INFERRED`
 - [Agent](Agent.md) `INFERRED`
-- [VisualMemory](VisualMemory.md) `INFERRED`
+- VisualMemory `INFERRED`
 - [Capture](Capture.md) `INFERRED`
 - OllamaError `INFERRED`
 

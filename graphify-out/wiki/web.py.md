@@ -1,15 +1,12 @@
 # web.py
 
-> 37 nodes
+> 27 nodes
 
 ## Key Concepts
 
 - **create_app()** (18 connections) — `desktop/glasses_agent/web.py`
 - **web.py** (18 connections) — `desktop/glasses_agent/web.py`
-- **gmail_backup.py** (10 connections) — `desktop/glasses_agent/gmail_backup.py`
-- **asyncio** (6 connections)
 - **BaseModel** (5 connections)
-- **__init__.py** (4 connections) — `desktop/glasses_agent/__init__.py`
 - **LookBody** (2 connections) — `desktop/glasses_agent/web.py`
 - **ModelBody** (2 connections) — `desktop/glasses_agent/web.py`
 - **PortBody** (2 connections) — `desktop/glasses_agent/web.py`
@@ -29,24 +26,26 @@
 - **look()** (1 connections) — `desktop/glasses_agent/web.py`
 - **ping()** (1 connections) — `desktop/glasses_agent/web.py`
 - **set_model()** (1 connections) — `desktop/glasses_agent/web.py`
-- *... and 12 more nodes in this community*
+- **status()** (1 connections) — `desktop/glasses_agent/web.py`
+- **Local dashboard at http://127.0.0.1:<DASHBOARD_PORT>. Bound to localhost only:…** (1 connections) — `desktop/glasses_agent/web.py`
+- **fastapi_responses** (1 connections)
+- *... and 2 more nodes in this community*
 
 ## Relationships
 
-- [core.py](core.py.md) (7 shared connections)
-- [provision.py](provision.py.md) (6 shared connections)
-- [hardware.py](hardware.py.md) (2 shared connections)
-- [telegram_service.py](telegram_service.py.md) (1 shared connections)
+- [core.py](core.py.md) (4 shared connections)
+- [provision.py](provision.py.md) (2 shared connections)
+- [Settings](Settings.md) (1 shared connections)
+- [pathlib](pathlib.md) (1 shared connections)
+- [hardware.py](hardware.py.md) (1 shared connections)
 
 ## Source Files
 
-- `desktop/glasses_agent/__init__.py`
-- `desktop/glasses_agent/gmail_backup.py`
 - `desktop/glasses_agent/web.py`
 
 ## Audit Trail
 
-- EXTRACTED: 58 (100%)
+- EXTRACTED: 41 (100%)
 - INFERRED: 0 (0%)
 - AMBIGUOUS: 0 (0%)
 

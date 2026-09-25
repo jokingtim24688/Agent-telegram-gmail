@@ -21,8 +21,12 @@
 
 ## Relationships
 
-- [core.py](core.py.md) (8 shared connections)
-- [provision.py](provision.py.md) (4 shared connections)
+- [Settings](Settings.md) (3 shared connections)
+- [Capture](Capture.md) (3 shared connections)
+- [core.py](core.py.md) (2 shared connections)
+- [LLM](LLM.md) (2 shared connections)
+- [telegram_service.py](telegram_service.py.md) (1 shared connections)
+- [Agent](Agent.md) (1 shared connections)
 
 ## Source Files
 

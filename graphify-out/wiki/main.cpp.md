@@ -1,10 +1,11 @@
 # main.cpp
 
-> 37 nodes
+> 48 nodes
 
 ## Key Concepts
 
 - **main.cpp** (34 connections) — `firmware/glasses/src/main.cpp`
+- **Config** (13 connections) — `firmware/glasses/src/main.cpp`
 - **logLine()** (10 connections) — `firmware/glasses/src/main.cpp`
 - **captureAndSend()** (9 connections) — `firmware/glasses/src/main.cpp`
 - **sendGmailPhoto()** (8 connections) — `firmware/glasses/src/main.cpp`
@@ -28,13 +29,12 @@
 - **pumpSerial()** (3 connections) — `firmware/glasses/src/main.cpp`
 - **reply()** (3 connections) — `firmware/glasses/src/main.cpp`
 - **statusText()** (3 connections) — `firmware/glasses/src/main.cpp`
-- **addWifiNetworks()** (2 connections) — `firmware/glasses/src/main.cpp`
-- *... and 12 more nodes in this community*
+- *... and 23 more nodes in this community*
 
 ## Relationships
 
-- [Config](Config.md) (3 shared connections)
-- [core.py](core.py.md) (2 shared connections)
+- [core.py](core.py.md) (1 shared connections)
+- [LLM](LLM.md) (1 shared connections)
 
 ## Source Files
 
@@ -43,7 +43,7 @@
 
 ## Audit Trail
 
-- EXTRACTED: 89 (100%)
+- EXTRACTED: 99 (100%)
 - INFERRED: 0 (0%)
 - AMBIGUOUS: 0 (0%)
 

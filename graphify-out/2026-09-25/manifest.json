@@ -102,9 +102,9 @@
     "semantic_hash": ""
   },
   "Progress.md": {
-    "mtime": 1790362611.8463933,
-    "seen": 1790362616.6946902,
-    "ast_hash": "8f0e387c2a846dd815b7ae9eca9ab046",
+    "mtime": 1790267856.2826931,
+    "seen": 1790267861.2703257,
+    "ast_hash": "8755844a07015826578518d8fc4cce14",
     "semantic_hash": ""
   },
   "desktop/glasses_agent/static/index.html": {
@@ -249,60 +249,6 @@
     "mtime": 1790267776.998695,
     "seen": 1790267861.2703242,
     "ast_hash": "c22175b8e544faa09f92e95f08fd3b5f",
-    "semantic_hash": ""
-  },
-  ".claude/skills/editor/scripts/_common.py": {
-    "mtime": 1790362574.388466,
-    "seen": 1790362616.694597,
-    "ast_hash": "756b132f7e337c5b010b097a8d49e588",
-    "semantic_hash": ""
-  },
-  ".claude/skills/editor/scripts/annotate.py": {
-    "mtime": 1790362468.8870668,
-    "seen": 1790362616.6946058,
-    "ast_hash": "2f3749a7817945169e190d65664f4cb0",
-    "semantic_hash": ""
-  },
-  ".claude/skills/editor/scripts/compare.py": {
-    "mtime": 1790361693.0012925,
-    "seen": 1790362616.6946073,
-    "ast_hash": "9aa4676c375c0cdb1f1669d786e961d5",
-    "semantic_hash": ""
-  },
-  ".claude/skills/editor/scripts/edit_text.py": {
-    "mtime": 1790361646.4076195,
-    "seen": 1790362616.6946092,
-    "ast_hash": "03b9c816ffe3afdfe19e605e6679e078",
-    "semantic_hash": ""
-  },
-  ".claude/skills/editor/scripts/fill.py": {
-    "mtime": 1790362326.4253626,
-    "seen": 1790362616.6946104,
-    "ast_hash": "576f58ac82283d3147fb85a7e75a9c0b",
-    "semantic_hash": ""
-  },
-  ".claude/skills/editor/scripts/inspect_pdf.py": {
-    "mtime": 1790361444.455205,
-    "seen": 1790362616.6946123,
-    "ast_hash": "3bf9107d05b24a5ec4dea78d9aca0a7e",
-    "semantic_hash": ""
-  },
-  ".claude/skills/editor/scripts/render.py": {
-    "mtime": 1790361208.4663956,
-    "seen": 1790362616.6946135,
-    "ast_hash": "ee3e007c835d6f6670727575461fbb18",
-    "semantic_hash": ""
-  },
-  ".claude/skills/editor/scripts/roundtrip.py": {
-    "mtime": 1790361381.5343955,
-    "seen": 1790362616.6946151,
-    "ast_hash": "502a5a4f2c2f472577db180f52b84ec3",
-    "semantic_hash": ""
-  },
-  ".claude/skills/editor/SKILL.md": {
-    "mtime": 1790362574.3853955,
-    "seen": 1790362616.6946723,
-    "ast_hash": "78f962751dd7b697f34063411234ad0c",
     "semantic_hash": ""
   }
 }

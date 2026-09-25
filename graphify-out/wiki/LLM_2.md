@@ -1,8 +1,8 @@
-# VisualMemory
+# LLM
 
-> God node · 13 connections · `desktop/glasses_agent/memory.py`
+> God node · 14 connections · `desktop/glasses_agent/llm.py`
 
-**Community:** [core.py](core.py.md)
+**Community:** [LLM](LLM.md)
 
 ## Connections by Relation
 
@@ -10,19 +10,20 @@
 - .__init__() `EXTRACTED`
 
 ### contains
-- memory.py `EXTRACTED`
+- llm.py `EXTRACTED`
 
 ### imports
 - [core.py](core.py.md) `EXTRACTED`
 - agent.py `EXTRACTED`
 
 ### method
+- .chat() `EXTRACTED`
+- .see() `EXTRACTED`
+- .installed() `EXTRACTED`
 - .__init__() `EXTRACTED`
-- .path() `EXTRACTED`
-- .recent() `EXTRACTED`
-- .search() `EXTRACTED`
-- .add() `EXTRACTED`
-- .__len__() `EXTRACTED`
+- .model() `EXTRACTED`
+- .loaded() `EXTRACTED`
+- .aclose() `EXTRACTED`
 
 ### references
 - .__init__() `EXTRACTED`

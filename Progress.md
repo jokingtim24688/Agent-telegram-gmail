@@ -90,3 +90,29 @@ Read `graphify-out/wiki/index.md` first. Regenerate it after changes: `graphify 
 ### Not verified
 - Nothing ran on real Windows, since this container is Linux. The Win32/COM calls use well-established signatures, but the first real run happens on the user's PC.
 - The skill-creator eval loop (with-skill vs. baseline runs) wasn't run. It can be done next if wanted.
+
+## 2026-09-25 — `editor` skill (PDF markup, answering, editing)
+
+**Request:** a skill that lets Claude edit PDFs with highlights, hand-drawn marks and text boxes. Then: use a Word round trip for rewrites, complete the questions in a PDF, work with the existing pdf skill, and call it "editor".
+
+### Done: `.claude/skills/editor/`
+- `SKILL.md` has a "pick the job" table: markup, answer, in-place edit or round trip. It hands off to the **pdf skill** for fillable form fields (its FORMS.md), OCR, merge and split.
+- The scripts (PyMuPDF):
+  - `inspect_pdf.py`: overview (text vs scanned, forms, signatures, advice) and `--find`.
+  - `render.py`: PNGs, a `--grid` coordinate overlay (rotation-safe), and `--clip`.
+  - `annotate.py`: highlight, underline, strikeout, squiggly (by phrase or by range with `to_text`), box, ellipse, arrow; hand-drawn circle, arrow, underline, check, cross, star, bracket and ink; textbox, sticky and handwrite (placed in free space); image; remove.
+  - `fill.py`: `scan` finds questions and headings ("Paragraph 3:"), blanks, ruled lines, boxes (including boxes drawn as four separate lines, and boxes with instructions printed inside), bubbles, checkboxes and True/False pairs; `apply` writes typed or handwritten answers, flows onto later lines, fills bubbles, ticks boxes, circles choices, draws stars, and refuses answers that don't fit.
+  - `edit_text.py`: redacts and rewrites in place, reusing the embedded font when it covers every character and matching the background; refuses when the new text would collide.
+  - `roundtrip.py`: probe, to-docx and to-pdf (pdf2docx; Word or LibreOffice).
+  - `compare.py`: a verdict, a per-region diff, and side-by-side PNGs.
+- Handwriting font: the user's .ttf, then Windows Ink Free / Segoe Print or macOS Bradley Hand, then Caveat (OFL), downloaded through the Google Fonts CSS API.
+
+### Tested (on real renders, not just exit codes)
+- An invoice fixture (tables, tinted box, a phrase wrapping across lines, a rotated page, a scanned page): all markup ops, in-place edits (the refusals were correct), compare verdicts.
+- A worksheet fixture: blanks, bubbles, ruled lines, checkboxes, a box and True/False, filled both typed and handwritten.
+- The user's real worksheet ("Critiquing Introduction Paragraphs"): 18 range highlights and 6 critiques, with stars on paragraphs 3 and 5. The MLA heading was left blank on purpose (personal info).
+- Round-trip probe: a simple memo survives (2.4% change); the invoice correctly fails (table columns shift).
+- Bugs found and fixed through testing: multi-line matches split in two; line boxes overlapping neighbouring lines; placement covering text; the arrow over-wobbling; a coordinate type bug; PyMuPDF text-box border limits; same-line start/stop highlights returning empty (now built from words, with a guard against empty marks); Google Docs four-line boxes; page-background fills; bogus True/False choices from essay text.
+
+### Not verified
+- Microsoft Word COM conversion (Windows-only). LibreOffice was tested.

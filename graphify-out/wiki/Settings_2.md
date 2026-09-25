@@ -1,16 +1,13 @@
-# State
+# Settings
 
-> God node · 15 connections · `desktop/glasses_agent/config.py`
+> God node · 16 connections · `desktop/glasses_agent/config.py`
 
-**Community:** [telegram_service.py](telegram_service.py.md)
+**Community:** [Settings](Settings.md)
 
 ## Connections by Relation
 
 ### calls
-- main() `EXTRACTED`
-- interactive_login() `EXTRACTED`
-- .__init__() `EXTRACTED`
-- doctor() `EXTRACTED`
+- load() `EXTRACTED`
 
 ### contains
 - config.py `EXTRACTED`
@@ -21,17 +18,21 @@
 - [core.py](core.py.md) `EXTRACTED`
 
 ### method
-- .__init__() `EXTRACTED`
-- .get() `EXTRACTED`
-- .set() `EXTRACTED`
+- .session_path() `EXTRACTED`
+- .problems() `EXTRACTED`
+- .gmail_enabled() `EXTRACTED`
 
-### rationale_for
-- Values learned at runtime that must survive restarts (ids, chosen model). `EXTRACTED`
+### references
+- .__init__() `EXTRACTED`
+- run() `EXTRACTED`
+- doctor() `EXTRACTED`
 
 ### uses
 - [Core](Core.md) `INFERRED`
 - [TelegramService](TelegramService.md) `INFERRED`
+- interactive_login() `INFERRED`
 - build_payload() `INFERRED`
+- make_client() `INFERRED`
 
 ---
 

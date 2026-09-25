@@ -1,35 +1,39 @@
 # Capture
 
-> God node · 13 connections · `desktop/glasses_agent/memory.py`
+> 11 nodes
 
-**Community:** [core.py](core.py.md)
+## Key Concepts
 
-## Connections by Relation
+- **Capture** (13 connections) — `desktop/glasses_agent/memory.py`
+- **VisualMemory** (13 connections) — `desktop/glasses_agent/memory.py`
+- **.__init__()** (3 connections) — `desktop/glasses_agent/agent.py`
+- **.__init__()** (3 connections) — `desktop/glasses_agent/memory.py`
+- **.path()** (3 connections) — `desktop/glasses_agent/memory.py`
+- **.recent()** (3 connections) — `desktop/glasses_agent/memory.py`
+- **.search()** (3 connections) — `desktop/glasses_agent/memory.py`
+- **.add()** (2 connections) — `desktop/glasses_agent/memory.py`
+- **Path** (2 connections)
+- **.when()** (1 connections) — `desktop/glasses_agent/memory.py`
+- **.__len__()** (1 connections) — `desktop/glasses_agent/memory.py`
 
-### calls
-- .__init__() `EXTRACTED`
-- .add() `EXTRACTED`
+## Relationships
 
-### contains
-- memory.py `EXTRACTED`
+- [core.py](core.py.md) (6 shared connections)
+- [Agent](Agent.md) (4 shared connections)
+- [Core](Core.md) (3 shared connections)
+- [Settings](Settings.md) (1 shared connections)
+- [LLM](LLM.md) (1 shared connections)
 
-### imports
-- [core.py](core.py.md) `EXTRACTED`
-- agent.py `EXTRACTED`
+## Source Files
 
-### method
-- .when() `EXTRACTED`
+- `desktop/glasses_agent/agent.py`
+- `desktop/glasses_agent/memory.py`
 
-### references
-- .handle_frame() `EXTRACTED`
-- .recent() `EXTRACTED`
-- .search() `EXTRACTED`
-- .remember() `EXTRACTED`
-- .path() `EXTRACTED`
+## Audit Trail
 
-### uses
-- [Core](Core.md) `INFERRED`
-- [Agent](Agent.md) `INFERRED`
+- EXTRACTED: 27 (87%)
+- INFERRED: 4 (13%)
+- AMBIGUOUS: 0 (0%)
 
 ---
 
